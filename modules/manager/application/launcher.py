@@ -1,7 +1,6 @@
 from common.logger import logger
 from config.settings import settings
-import win32com.client
-import time
+import win32com.client, time
 
 
 class SAP_Launcher:
@@ -12,7 +11,6 @@ class SAP_Launcher:
 
     def start(self):
         self.log.info("Starting SAP GUI client")
-
         try:
             path = self.sap_path.strip('"')
             shell = win32com.client.Dispatch("WScript.Shell")
@@ -25,7 +23,6 @@ class SAP_Launcher:
             raise
 
     def get_application(self):
-
         self.log.info("Retrieving SAPGUI → Scripting Engine instance")
         try:
             for i in range(20):

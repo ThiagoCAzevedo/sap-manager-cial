@@ -1,9 +1,9 @@
 from typing import Tuple
 from common.logger import logger
-import pythoncom
 from modules.manager.application.launcher import SAP_Launcher
 from modules.manager.application.session_provider import SAP_SessionProvider
 from modules.manager.application.authenticator import SAP_Authenticator
+import pythoncom
 
 
 class SAP_Client:

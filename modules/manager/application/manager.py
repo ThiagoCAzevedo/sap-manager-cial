@@ -2,7 +2,6 @@ from common.logger import logger
 
 
 class SAPSessionManager:
-
     session = None
     log = logger("sap_manager")
 
