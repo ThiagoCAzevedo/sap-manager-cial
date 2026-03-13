@@ -1,5 +1,6 @@
-from pydantic_settings import BaseSettings
+from pydantic_settings import BaseSettings, SettingsConfigDict
 from pydantic import Field
+import os
 
 
 class Settings(BaseSettings):
@@ -14,10 +15,11 @@ class Settings(BaseSettings):
     SAP_USER: str
     SAP_PSWD: str
 
-    class Config:
-        env_file = "config/.env"
-        extra = "forbid"
-        case_sensitive = True
+    model_config = SettingsConfigDict(
+        env_file="config/.env.test" if os.getenv("TESTING") == "true" else "config/.env",
+        extra="forbid",
+        case_sensitive=True,
+    )
 
 
 settings = Settings()

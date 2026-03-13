@@ -13,7 +13,7 @@ def create_app() -> FastAPI:
 
     app = FastAPI(
         title="Auto Line Feeding API",
-        description="",
+        description="SAP manager microservice responsible for powering sap session to CIAL system",
         docs_url="/sap-docs",
     )
 
@@ -42,6 +42,6 @@ if __name__ == "__main__":
     uvicorn.run(
         "main:app",
         host="127.0.0.1",
-        port=8005,
+        port=8002,
         reload=True
     )
