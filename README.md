@@ -88,6 +88,8 @@ or
   python -m uvicorn main:app --reload --port <PORT TO RUN>
 ```
 
+***Observation:** Use Python 3.10.0*
+
 
 ## 🟢 Running Tests
 
