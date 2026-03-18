@@ -73,7 +73,7 @@ Go to the project directory
 Install dependencies
 
 ```bash
-  pip install -r requirements.txt
+  pip install -r requirements.txt --trusted-host pypi.org --trusted-host files.pythonhosted.org 
 ```
 
 Start the server
